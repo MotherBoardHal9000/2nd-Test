@@ -1,0 +1,595 @@
+@import "./animation.css";
+@import "./css/utility.css";
+@import "./css/reset.css";
+@import "./common.css";
+
+body {
+  font-family: "Google Sans Flex", sans-serif;
+  color: #424242;
+  line-height: normal;
+}
+
+.hero-description {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.hero-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 126.5px;
+  gap: 14px;
+}
+
+.hero-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.hero-section {
+  position: relative;
+  height: 911px;
+  padding-inline: 80px;
+
+  @media (max-width: 750px) {
+    height: 1200px;
+    padding-inline: 60px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #004ea2;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  &:first-child {
+    margin-right: 14px;
+  }
+}
+
+.swiper-pagination-bullets {
+  text-align: center;
+  top: 980px !important;
+
+  @media (min-width: 751px) {
+    margin-left: 140px;
+    top: 80% !important;
+  }
+
+  @media (max-width: 750px) {
+    text-align: left;
+  }
+}
+
+.swiper {
+  height: 677px;
+
+  @media (max-width: 750px) {
+    height: 1000px;
+  }
+}
+
+.product-heading {
+  position: absolute;
+  display: flex;
+  top: 81px;
+  white-space: preserve nowrap;
+  font-size: 230px;
+  font-weight: 700;
+  color: #004ea20d;
+  animation: marquee-stop 10s ease-out infinite;
+  animation-delay: 1ms;
+  will-change: transform;
+}
+
+.product-section {
+  position: relative;
+  height: 911px;
+  padding-top: 225px;
+  overflow: hidden;
+
+  @media (max-width: 750px) {
+    height: 1398px;
+    padding-top: 249px;
+    padding-inline: 65px;
+  }
+}
+
+.product-image {
+  max-width: 823px;
+  width: 100%;
+
+  @media (max-width: 750px) {
+    max-width: 621px;
+    max-height: 339.22px;
+  }
+}
+
+.product-title {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 87px;
+  margin-bottom: 13px;
+
+  & > span:last-child {
+    color: #004ea2;
+  }
+}
+.product-category {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.product-button {
+  width: 239px;
+  height: 44px;
+  font-weight: 500;
+
+  @media (max-width: 750px) {
+    width: 272px;
+    height: 48px;
+  }
+}
+
+.product-slide-content {
+  width: 100%;
+  max-width: 710px;
+}
+.product-description {
+  margin-bottom: 81px;
+  font-size: 28px;
+}
+.product-slide-inner {
+  gap: 102px;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   Sustainability Section
+========================= */
+
+.sustainability-section {
+  height: 911px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: min(5vw, 120px);
+  padding-block: 182px;
+  background-image: url("../assets/images/creating.png");
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .sustainability-section {
+    height: 1400px;
+    align-items: start;
+    padding-left: 65px;
+    padding-right: 64px;
+    padding-block: 140px;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.sustainability-section > * {
+  width: 50%;
+}
+
+@media (max-width: 750px) {
+  .sustainability-section > * {
+    width: 100%;
+  }
+}
+
+/* Intro Block */
+
+.sustainability-intro {
+  max-width: 703px;
+}
+
+.sustainability-intro .section-eyebrow {
+  font-size: 24px;
+  color: #f0f0f0;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.sustainability-intro .section-title {
+  font-size: min(5.5vw, 72px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 750px) {
+  .sustainability-intro .section-title {
+    font-size: 72px;
+  }
+}
+
+.sustainability-intro .section-title span {
+  white-space: nowrap;
+}
+
+.sustainability-intro .section-title span:last-child {
+  color: #51d6ff;
+}
+
+.sustainability-intro .section-description {
+  font-size: 28px;
+}
+
+@media (max-width: 750px) {
+  .sustainability-intro .section-description {
+    margin-bottom: 60px;
+  }
+}
+
+/* =========================
+   Accordion
+========================= */
+
+.sustainability-accordion .accordion-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.accordion-item {
+  border-radius: 20px;
+  border: 1px solid #ffffff80;
+}
+
+/* Trigger */
+
+.accordion-trigger {
+  width: 100%;
+  height: 80px;
+  cursor: pointer;
+  padding-block: 25px;
+  padding-left: 40px;
+  padding-right: 24px;
+}
+
+.accordion-trigger span:first-child {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.accordion-trigger::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("../assets/images/add-plus.png") no-repeat center / contain;
+  transition:
+    transform 0.3s ease,
+    background-image 0.2s ease;
+}
+
+/* Checked State */
+
+.accordion-item > input:checked ~ .accordion-trigger::after {
+  background: url("../assets/images/remove-minus.svg") no-repeat center / contain;
+}
+
+.accordion-item > input:checked ~ .accordion-content {
+  max-height: 359.36px;
+  padding-block: 25px;
+  border-top: 1px solid #ffffff80;
+  opacity: 1;
+}
+
+/* Content */
+
+.accordion-content {
+  max-height: 0;
+  padding-left: 40px;
+  padding-right: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    padding-block 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    border-top 0.3s ease 0.1s,
+    opacity 0.3s ease 0.1s;
+}
+
+/* Text Area */
+
+.accordion-text {
+  display: flex;
+  gap: 47px;
+  margin-bottom: 40.3px;
+}
+
+.accordion-text p {
+  font-size: 20px;
+}
+
+/* Link Button */
+
+.accordion-link {
+  width: 194px;
+  min-width: 194px;
+  height: 46.91px;
+  border-radius: 8px;
+  gap: 16px;
+  border: 1px solid #f0f0f0;
+}
+
+/* Highlights */
+
+.accordion-highlights {
+  display: flex;
+}
+
+.highlight-item {
+  padding-inline: min(3.5vw, 49px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+@media (max-width: 750px) {
+  .highlight-item {
+    padding-inline: 49px;
+  }
+}
+
+.highlight-item img {
+  min-width: 85.47px;
+}
+
+@media (max-width: 750px) {
+  .trust-video {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    width: 1168px;
+    height: 100%;
+  }
+}
+
+.trust-title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.trust-description {
+  font-size: 28px;
+}
+.trust-content {
+  padding-top: 180px;
+  padding-inline: 120px;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  color: white;
+
+  @media (max-width: 750px) {
+    padding-top: 140px;
+    padding-inline: 65px;
+  }
+}
+.smart-factory-link {
+  width: 186px;
+  height: 37.6px;
+
+  @media (max-width: 750px) {
+    width: 190px;
+    height: 48px;
+  }
+}
+.smart-factory-description {
+  font-size: 28px;
+  margin-bottom: 57px;
+}
+.smart-factory-media {
+  max-width: 695px;
+  object-fit: contain;
+  flex-grow: 1;
+}
+.smart-factory-title {
+  font-size: 72px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.smart-factory-block {
+  position: absolute;
+  background-color: white;
+  border-radius: 40px 40px 0 0;
+  padding-top: 181px;
+  z-index: 10;
+  padding-bottom: 206px;
+  padding-inline: 120px;
+  height: 792px;
+  top: 500px;
+  opacity: 0;
+  inset-inline: 0;
+  transform: translateY(60px);
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.6s ease;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 750px) {
+    padding-inline: 62px;
+    height: 1389px;
+    top: 800px;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.smart-factory-content {
+  max-width: 742px;
+}
+.smart-factory-eyebrow {
+  color: #004ea2;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.global-trust-section {
+  height: 1075px;
+  position: relative;
+  background: #000;
+
+  @media (max-width: 750px) {
+    height: 1368px;
+  }
+}
+.smart-factory-block.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.space-for-section-05 {
+  height: 200px;
+
+  @media (max-width: 750px) {
+    height: 700px;
+  }
+}
+
+/* =========================
+   News Section
+========================= */
+
+.news-section {
+  height: 2125px;
+  background-color: rgba(0, 78, 162, 0.07);
+  padding-top: 181px;
+  padding-inline: 120px;
+}
+
+/* Eyebrow */
+.news-eyebrow {
+  font-size: 24px;
+  color: #004ea2;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.news-title {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.news-description {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+/* =========================
+   Horizontal Layout
+========================= */
+
+.horizontal-section {
+  overflow: hidden;
+  height: 1125px;
+}
+
+.news-slider {
+  display: flex;
+  align-items: center;
+}
+
+.news-track {
+  display: flex;
+  gap: 25px;
+}
+
+/* =========================
+   News Card
+========================= */
+
+.news-card {
+  border-radius: 20px;
+  width: 401px;
+  min-width: 401px;
+  height: 409px;
+  overflow: hidden;
+}
+
+/* Card Content Box */
+.news-card-content {
+  height: 184px;
+  background-color: white;
+  padding-top: 35px;
+  padding-left: 32px;
+  padding-right: 26px;
+  font-weight: 500;
+}
+
+/* Date */
+.news-card-date {
+  font-size: 20px;
+  color: #a5a5a5;
+  margin-bottom: 19px;
+}
+
+/* Title */
+.news-card-title {
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+/* Image */
+.news-card-image {
+  height: 225px;
+}
+
+/* =========================
+   View More Card
+========================= */
+
+.news-card-more {
+  padding-left: 30px;
+}
+
+.news-card-more-content {
+  height: 100%;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  font-size: 20px;
+  max-width: 99px;
+  cursor: pointer;
+}
+
+.news-card-more-icon {
+  margin-left: 27px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid #424242;
+}
+
+.news-card-more-label {
+  width: 99px;
+}

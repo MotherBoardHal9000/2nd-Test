@@ -1,0 +1,80 @@
+.more-button {
+  gap: 16px;
+
+  @media (max-width: 750px) {
+    gap: 5px;
+  }
+
+  border-radius: 22px;
+  border: 1px solid #d9d9d9;
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  @media (max-width: 750px) {
+    font-size: 24px;
+  }
+}
+
+.language-selector {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 7px;
+  width: 80px;
+  min-height: 32px;
+  border-radius: 16px;
+  border: 1px solid currentColor;
+  font-size: 15px;
+  font-weight: 500;
+  max-height: 32px;
+  z-index: 9999;
+  transition: max-height 0.3s ease;
+  & > span:nth-child(2) {
+    flex-grow: 1;
+  }
+
+  .language-list {
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      padding-block 0.3s ease,
+      opacity 0.3s ease;
+    top: calc(100% + 7px);
+    left: 0;
+    width: 80px;
+    opacity: 0;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid #51d6ff;
+    color: #424242;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 500;
+    & > p:not(:last-child) {
+      margin-bottom: 11px;
+    }
+    & > p:hover {
+      color: #51d6ff;
+    }
+  }
+}
+
+.language-selector svg {
+  transition: transform 0.4s ease;
+}
+
+.language-selector.is-opened svg {
+  transform: rotate(-180deg);
+}
+
+.language-selector.is-opened > .language-list {
+  max-height: 75px;
+  padding-block: 13px;
+  opacity: 1;
+}

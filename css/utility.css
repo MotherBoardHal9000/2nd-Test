@@ -1,0 +1,46 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.white-blur {
+  background-color: #ffffff24;
+  backdrop-filter: blur(30px);
+}
+
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-hide-up {
+  max-height: 0 !important;
+}
+
+body.scroll-hide {
+  overflow: hidden;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none !important;
+}
