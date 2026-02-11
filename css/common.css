@@ -48,7 +48,7 @@
 .header.color {
   color: #424242;
   .header-logo > a::after {
-    background: url("/assets/images/logo-color.svg") no-repeat center / contain;
+    background: url("./assets/images/logo-color.svg") no-repeat center / contain;
   }
 }
 
@@ -58,7 +58,7 @@
   display: block;
   width: 211px;
   height: 35px;
-  background: url("/assets/images/logo.svg") no-repeat center / contain;
+  background: url("./assets/images/logo.svg") no-repeat center / contain;
 }
 
 /* header nav container */
